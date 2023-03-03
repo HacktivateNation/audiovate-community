@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/static/css/styles.css" rel="stylesheet" />
+
+  <title>Audio Analyzer</title>
+</head>
+
+<body id="body">
+  <div id="mainContainer" class="p-absolute h-100 w-100">
+    <div id="controlPanel" class="h-100 d-flex-column j-center align-items-center">
+      <input type="file" id="fileSelect" class="p-absolute" multiple />
+    </div>
+    
+  </div>
+  
+  <canvas id="canvas"></canvas>
+
+  <script src="/static/js/sound.js"></script>
+  <script src="/static/js/controls.js"></script>
+</body>
+
+</html>
