@@ -1,5 +1,7 @@
 const actionBtn = document.getElementById('action');
 const file = document.getElementById('fileSelect');
+const bg = document.getElementById('bgSelect');
+const body = document.getElementById('body');
 let canvas = document.getElementById('canvas');
 // let canvasRigt = document.getElementById('canvasRight');
 canvas.width = window.innerWidth;

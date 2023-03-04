@@ -13,6 +13,11 @@ audio1.addEventListener('ended', () => {
     filepath = URL.createObjectURL(this.files[0]);
     console.log(this.files);
   });
+  bg.addEventListener('change', function() {
+    let bgfilepath = URL.createObjectURL(this.files[0]);
+    body.style.background = `url("${bgfilepath}") no-repeat center center`;
+    body.style.backgroundSize = "contain";
+  });
   
   document.body.onkeyup = function(e) {
     if (e.key == " " ||
@@ -20,6 +25,6 @@ audio1.addEventListener('ended', () => {
         e.keyCode == 32      
     ) {
       playStop();
-      document.getElementById('fileSelect').style.display = 'none';
+      document.getElementById('songSelectLabel').style.display = 'none';
     }
   }
