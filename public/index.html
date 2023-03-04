@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link href="/static/css/styles.css" rel="stylesheet" />
 
   <title>Audio Analyzer</title>
@@ -12,7 +14,21 @@
 <body id="body">
   <div id="mainContainer" class="p-absolute h-100 w-100">
     <div id="controlPanel" class="h-100 d-flex-column j-center align-items-center">
-      <input type="file" id="fileSelect" class="p-absolute" multiple />
+      <div id="musicSelectContainer" class="controlButton d-flex-column j-center align-items-center">
+        <label for="fileSelect" id="songSelectLabel" class="d-block">
+          <span class="material-icons md-48">
+          &#xe405;
+          </span>
+        </label> 
+        <input type="file" id="fileSelect" multiple />
+      </div>
+      <div id="bgSelectContainer" class="controlButton d-flex-column j-center align-items-center">
+        <label for="bgSelect" id="bgSelectLabel" class="d-block">
+          <span class="material-icons md-48">&#xe3f4;</span>
+          <!-- <span class="material-icons md-48">face</span> -->
+        </label> 
+        <input type="file" id="bgSelect" />
+      </div>
     </div>
     
   </div>
