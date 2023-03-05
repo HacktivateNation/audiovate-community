@@ -181,10 +181,14 @@ scrollbar-width: none;  /* Firefox */
     z-index: 10000;
   }
 
-  #playState,
-  #audioContainer {
+  #playState {
     display: none;
     z-index: 5000;
+  }
+
+  #audioContainer {
+    display: none;
+    z-index: 10000;
   }
 
   /* Material Icons */
