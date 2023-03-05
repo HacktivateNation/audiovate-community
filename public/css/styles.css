@@ -76,6 +76,7 @@ body {
 scrollbar-width: none;  /* Firefox */
 }
 
+/* Containers */
   .d-block {
     display: block;
   }
@@ -119,6 +120,24 @@ scrollbar-width: none;  /* Firefox */
     position: absolute;
   }
 
+  /* Colors */
+  .white {
+    color: #FFF;
+  }
+
+  .transparentBg {
+    background: transparent;
+  }
+
+  /* Borders */
+  .noBorder {
+    border: none;
+  }
+
+  .cursorPointer:hover {
+    cursor: pointer;
+  }
+
   #colorSchemeContainer {
     right: 0;
     top: 4em;
@@ -152,8 +171,19 @@ scrollbar-width: none;  /* Firefox */
     
   }
 
+  #audioContainer {
+    bottom: 4em;
+    z-index: 5000;
+  }
+
   #controlPanel {
     position: absolute;
+    z-index: 10000;
+  }
+
+  #playState,
+  #audioContainer {
+    display: none;
     z-index: 5000;
   }
 
@@ -162,3 +192,4 @@ scrollbar-width: none;  /* Firefox */
   .material-icons.md-24 { font-size: 24px; }
   .material-icons.md-36 { font-size: 36px; }
   .material-icons.md-48 { font-size: 48px; }
+  .material-icons.md-200 { font-size: 200px; }
