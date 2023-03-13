@@ -12,7 +12,7 @@ html {
 
 
 
-  #fileSelect,
+  #audioFileUpload,
   #bgSelect {
     visibility: hidden;
   }
@@ -106,6 +106,10 @@ scrollbar-width: none;  /* Firefox */
 
   .w-100 {
     width: 100%;
+  }
+
+  .width50px {
+    width: 50px;
   }
 
   .h-100 {

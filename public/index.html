@@ -25,12 +25,12 @@
     
     <div id="controlPanel" class="h-100 d-flex-column j-center align-items-center">
       <div id="musicSelectContainer" class="controlButton d-flex-column j-center align-items-center">
-        <label for="fileSelect" id="songSelectLabel" class="d-block">
+        <label for="audioFileUpload" id="songSelectLabel" class="d-block">
           <span class="material-icons md-48">
           &#xe405;
           </span>
         </label> 
-        <input type="file" id="fileSelect" multiple />
+        <input type="file" id="audioFileUpload" multiple />
       </div>
       <div id="bgSelectContainer" class="controlButton d-flex-column j-center align-items-center">
         <label for="bgSelect" id="bgSelectLabel" class="d-block">
@@ -39,13 +39,24 @@
         </label> 
         <input type="file" id="bgSelect" />
       </div>
+
+      <div id="" class="controlButton d-flex-column j-center align-items-center">
+        <a href="#" id="blackBars">
+         <img src="/static/images/blackBarsWithTips.jpg" alt="starburst" class="width50px" />
+        </a>
+     </div>
+      <div id="" class="controlButton d-flex-column j-center align-items-center">
+         <a href="#" id="starburst">
+          <img src="/static/images/starburst.jpg" alt="starburst" class="width50px" />
+         </a>
+      </div>
     </div>
     
   </div>
   
   <canvas id="canvas"></canvas>
-
-  <script src="/static/js/sound.js"></script>
+  <script src="/static/js/Classes/VisualParams.js"></script>
+  <script id="visualizer" src="/static/js/sound.js"></script>
   <script src="/static/js/controls.js"></script>
 </body>
 
