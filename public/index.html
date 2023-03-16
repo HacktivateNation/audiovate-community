@@ -25,7 +25,7 @@
     
     <div id="controlPanel" class="h-100 d-flex-column j-center align-items-center">
       <div id="musicSelectContainer" class="controlButton d-flex-column j-center align-items-center">
-        <label for="audioFileUpload" id="songSelectLabel" class="d-block">
+        <label for="audioFileUpload" id="songSelectLabel" class="control cursorPointer d-block">
           <span class="material-icons md-48">
           &#xe405;
           </span>
@@ -33,20 +33,26 @@
         <input type="file" id="audioFileUpload" multiple />
       </div>
       <div id="bgSelectContainer" class="controlButton d-flex-column j-center align-items-center">
-        <label for="bgSelect" id="bgSelectLabel" class="d-block">
+        <label for="bgSelect" id="bgSelectLabel" class="control cursorPointer d-block">
           <span class="material-icons md-48">&#xe3f4;</span>
-          <!-- <span class="material-icons md-48">face</span> -->
         </label> 
         <input type="file" id="bgSelect" />
       </div>
 
       <div id="" class="controlButton d-flex-column j-center align-items-center">
-        <a href="#" id="blackBars">
-         <img src="/static/images/blackBarsWithTips.jpg" alt="starburst" class="width50px" />
+        <a href="#" id="blackBars" class="control" onclick="hideControlPanel()">
+         <img src="/static/images/blackBarsWithTips.jpg" alt="black bars" class="width50px" />
         </a>
      </div>
+
+     <div id="" class="controlButton d-flex-column j-center align-items-center">
+      <a href="#" id="smallBars" class="control" onclick="hideControlPanel()">
+       <img src="/static/images/minibars.jpg" alt="small bars" class="width50px" />
+      </a>
+    </div>
+
       <div id="" class="controlButton d-flex-column j-center align-items-center">
-         <a href="#" id="starburst">
+         <a href="#" id="starburst" class="control" onclick="hideControlPanel()">
           <img src="/static/images/starburst.jpg" alt="starburst" class="width50px" />
          </a>
       </div>
@@ -55,9 +61,12 @@
   </div>
   
   <canvas id="canvas"></canvas>
-  <script src="/static/js/Classes/VisualParams.js"></script>
   <script id="visualizer" src="/static/js/sound.js"></script>
   <script src="/static/js/controls.js"></script>
+  <script src="/static/js/Visualizers/BlackBars.js"></script>
+  <!-- <script src="/static/js/Visualizers/GreyBars.js"></script> -->
+  <script src="/static/js/Visualizers/Starburst.js"></script>
+  <script src="/static/js/Visualizers/MiniBars.js"></script>
 </body>
 
 </html>

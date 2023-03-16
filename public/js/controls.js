@@ -11,12 +11,16 @@ function triggerPlayState(){
   } 
   else {
     audio1.pause()
-    // document.getElementById('playState').style.display = 'flex';
   };
-  // audio1.play();
   playStop();
-  document.getElementById('songSelectLabel').style.display = 'none';
-  
+  const audioFileInput = document.getElementById('audioFileUpload');
+  const audioFileBtn = document.getElementById('songSelectLabel');
+  audioFileInput.setAttribute('disabled', true);
+  audioFileBtn.style.opacity = '0.3';
+}
+
+function hideControlPanel(){
+  document.getElementById('controlPanel').style.transform = 'translateX(-100%)';
 }
 
 // Events
@@ -45,10 +49,9 @@ audio1.addEventListener('ended', () => {
     }
   });
 
-  audio1.addEventListener('pause', () => {
-    console.log('paused');
-    // document.getElementById('playState').style.display = 'flex';
-  });
+  // audio1.addEventListener('pause', () => {
+    
+  // });
 
   bg.addEventListener('change', function() {
     let bgfilepath = URL.createObjectURL(this.files[0]);
@@ -66,6 +69,22 @@ audio1.addEventListener('ended', () => {
   document.getElementById('blackBars').addEventListener('click', function(e) {
     e.preventDefault();
     visual = 'blackBars';
+
+
+    document.removeChild(document.getElementById('canvas'));
+    canvas = document.createElement('canvas');
+    canvas.id = 'canvas';
+    document.body.appendChild(canvas);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx = canvas.getContext('2d');
+
+    playStop();
+  });
+
+  document.getElementById('smallBars').addEventListener('click', function(e) {
+    e.preventDefault();
+    visual = 'smallBars';
 
 
     document.removeChild(document.getElementById('canvas'));
@@ -102,4 +121,13 @@ audio1.addEventListener('ended', () => {
       playing = !playing;
       triggerPlayState();
     }
-  }
+
+    if (e.keyCode == 37) {
+      document.getElementById('controlPanel').style.transform = 'translateX(-100%)';
+    }
+
+    if (e.keyCode == 39) {
+      document.getElementById('controlPanel').style.transform = 'translateX(0)';
+    }
+    console.log(document.getElementById('controlPanel').offsetLeft);
+  };
