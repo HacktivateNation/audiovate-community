@@ -5,10 +5,12 @@ function triggerPlayState(){
   if(audio1.src === '') audio1.src = filepath;
 
   if(playing){
+    audioCtx.resume();
     audio1.play();
     document.getElementById('playState').style.display = 'none';
     document.getElementById('audioContainer').style.display = 'flex';
   } 
+  
   else {
     audio1.pause()
   };
@@ -37,7 +39,7 @@ audio1.addEventListener('ended', () => {
     audio1.load();
     audio1.play();
   });
-  
+
   audioFileUpload.addEventListener('change', function() {
     filepath = URL.createObjectURL(this.files[0]);
 
