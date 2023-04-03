@@ -1,6 +1,6 @@
 const audioFileUpload = document.getElementById('audioFileUpload');
 const bg = document.getElementById('bgSelect');
-
+let boolControlpanel=false;
 function triggerPlayState(){
   if(audio1.src === '') audio1.src = filepath;
 
@@ -133,3 +133,15 @@ audio1.addEventListener('ended', () => {
     }
     console.log(document.getElementById('controlPanel').offsetLeft);
   };
+  document.addEventListener("keydown", function(event) {
+  
+    if (event.key === "v" || event.key === "V") {
+      if (boolControlpanel==false) {
+      document.getElementById('controlPanel').style.transform = 'translateX(-100%)';
+      boolControlpanel=true;
+    }
+    else {
+      document.getElementById('controlPanel').style.transform = 'translateX(0)';
+      boolControlpanel=false;
+    }
+  } });
